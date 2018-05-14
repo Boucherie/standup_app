@@ -111,6 +111,10 @@ body {
 .fixed .right-side {
   padding-top: 50px;
 }
+
+.content-wrapper {
+  padding: 50px;
+}
 @media (max-width: 767px) {
   .fixed .content-wrapper,
   .fixed .right-side {
