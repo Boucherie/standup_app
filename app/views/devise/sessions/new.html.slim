@@ -3,7 +3,7 @@
     a href="/"
       b Standup App
   .login-box-body
-    p.login-box-msg Sign up
+    p.login-box-msg Sign In
     = form_for(resource, as: resource_name, url: new_user_session_path(resource_name)) do |f|
       .form-group
         = devise_error_messages!

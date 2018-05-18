@@ -13,7 +13,6 @@ HTML
     .wrapper
       = render 'layouts/navigation/layout'
       .content-wrapper
-        p.notice <%= notice %>
-        p.alert <%= alert %>
+        = flash_messages
         = yield
       = render 'layouts/navigation/footer'
