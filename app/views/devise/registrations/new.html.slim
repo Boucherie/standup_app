@@ -19,7 +19,7 @@
           em
             | (
             = @minimum_password_length
-            | characters minimum)
+            |  characters minimum)
       .form-group.has-feedback
         = f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Retype Password"
       .row
