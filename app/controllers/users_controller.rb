@@ -20,17 +20,6 @@ class UsersController < ApplicationController
 
   def password
     @user = current_user
-    respond_to do |format|
-      if @user.update(user_password_params)
-        bypass_sign_in(@user)
-        format.html {
-          redirect_to my_password_path,
-          notice: 'Password was successfully updated'
-        }
-      else
-        format.html { render :edit }
-      end
-    end
   end
 
   def update_password
@@ -40,7 +29,7 @@ class UsersController < ApplicationController
         bypass_sign_in(@user)
         format.html {
           redirect_to my_password_path,
-          notice: 'Password was successfully updated'
+          notice: 'Password was successfully updated.'
         }
       else
         format.html { render :edit }
@@ -66,6 +55,7 @@ class UsersController < ApplicationController
     @user = User.unscoped.new(user_params.except("role"))
     @user.account = current_account
     @user.password = "password123"
+
     respond_to do |format|
       begin
         if @user.valid? && @user.invite!(current_user)
@@ -99,7 +89,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    respond_to do ||format|
+    respond_to do |format|
       format.html {
         redirect_to account_users_path,
         notice: 'User was successfully destroyed.'
@@ -123,7 +113,7 @@ class UsersController < ApplicationController
     def set_choices
       @choices = []
       @choices << ["Admin", 'admin']
-      @chices << ["User", 'user']
+      @choices << ["User", 'user']
     end
 
     def user_params

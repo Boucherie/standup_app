@@ -5,7 +5,6 @@ class AccountsController < ApplicationController
     @account = Account.new
   end
 
-
   def create
     @account = Account.new(account_params)
     if @account.save

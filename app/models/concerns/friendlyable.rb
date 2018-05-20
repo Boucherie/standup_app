@@ -2,7 +2,7 @@ module Friendlyable
   extend ActiveSupport::Concern
 
   included do
-    extend  ::FriendlyId
+    extend ::FriendlyId
     before_create :set_hash_id
     friendly_id :hash_id
   end
