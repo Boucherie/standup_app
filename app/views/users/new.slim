@@ -15,15 +15,15 @@
                   == @user.errors.full_messages.map{ | msg | content_tag(:li, msg)}
                   .join
               .form-group
-              = label_tag "user[ name]", "Name", class: 'control-label col-lg-2'
+              = label_tag "user[name]", "Name", class: 'control-label col-lg-2'
               .col-lg-10 = f.text_field :name, {placeholder: "Name", autofocus: true, class: "form-control"}
               .form-group
-                = label_tag "user[ email]", "Email", class: 'control-label col-lg-2'
+                = label_tag "user[email]", "Email", class: 'control-label col-lg-2'
                 .col-lg-10 = f.email_field :email, {placeholder: "Email Address", autofocus: true, class: "form-control"}
               .form-group
-                = label_tag "user[ role]", "Role", class: 'control-label col-lg-2'
+                = label_tag "user[role]", "Role", class: 'control-label col-lg-2'
                 .col-lg-10
-                  = select_tag "user[ role]",
+                  = select_tag "user[role]",
                     options_for_select(@choices, 'user'), class: 'form-control'
             .box-footer style ="height: 55px;"
               span.pull-right
