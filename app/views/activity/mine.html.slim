@@ -1,2 +1,14 @@
-h1 Activity#mine
+h1 My Activity
+h2 The placeholder edition
+
+p This app follows Rob Race's "Build a SaaS App in Rails 5" book, which covers the gems and methodology needed to build a fully-functional application in modern Rails 5.0. Progress will be tracked on this page, using the list below.
+p ERB files are written in Slim, and the application uses Bootstrap; continuous updates to the design are ongoing throughout this build. The app is also thoroughly tested, using simplecov, factory_bot_rails, and rspec.
 p Find me in app/views/activity/mine.html.slim
+
+h3 Accessible progress:
+
+ul#selector
+  li
+    | Sign Up and Sign In Pages (/users/sign_in; /users/sign_up); User links make heavy use of the Devise gem, in addition to devise_invitable, letter_opener, rolify, friendlyable.
+  li
+    | Account Summary and Add New User pages  (/account/users/; /account/users/new)

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  rolify
   extend Devise::Models
   include Friendlyable
   belongs_to :account, optional: true
