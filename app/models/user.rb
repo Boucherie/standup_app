@@ -1,9 +1,10 @@
 class User < ApplicationRecord
-  rolify
-  extend Devise::Models
   include Friendlyable
+
+  extend Devise::Models
   belongs_to :account, optional: true
 
+  rolify
 
 
   # Include default devise modules. Others available are:
