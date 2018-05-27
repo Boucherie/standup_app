@@ -3,9 +3,10 @@ require 'rails_helper'
 RSpec.feature "SignInProcesses", type: :feature do
   it "should require the user log and successfully logs in" do
     password = "123456789"
-    u = FactoryBot.create( :user,{
-      password: password,  password_confirmation: password
-      })
+    u = FactoryBot.create( :user,
+      password: password,
+      password_confirmation: password)
+      u.add_role :user
 
     visit root_path
 

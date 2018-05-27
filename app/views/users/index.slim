@@ -14,6 +14,7 @@
                 tr
                   th Name
                   th Email
+                  th Title
                   th Status
                   th Role
                   th Added at
@@ -23,6 +24,7 @@
                   tr
                     td = user.name
                     td = user.email
+                    td = user.title
                     td = user.accepted_or_not_invited? ? "Active" : "Invited"
                     td = user.account.roles&.first&.name&.capitalize
                     td = user.created_at.strftime('%D')

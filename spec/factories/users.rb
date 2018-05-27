@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :user do
+    association :author, factory: :user, strategy: :build
     name "MyString"
     email { Faker::Internet.email }
     password "123ewq"
